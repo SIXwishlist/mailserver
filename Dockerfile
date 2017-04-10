@@ -30,6 +30,9 @@ RUN tar -C /caddy -xf caddy_linux_amd64.tar.gz && rm caddy_linux_amd64.tar.gz
 RUN cp /caddy/caddy_linux_amd64 /usr/local/bin/caddy
 RUN rm -rf /caddy
 
+# to generate your dhparam.pem file
+RUN openssl dhparam -out /etc/ssl/private/dhparams.pem 2048
+
 # Install acme.sh
 RUN curl https://get.acme.sh | sh
 
