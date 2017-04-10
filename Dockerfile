@@ -31,6 +31,7 @@ RUN cp /caddy/caddy_linux_amd64 /usr/local/bin/caddy
 RUN rm -rf /caddy
 
 # to generate your dhparam.pem file
+RUN mkdir -p /etc/ssl/private
 RUN openssl dhparam -out /etc/ssl/private/dhparams.pem 2048
 
 # Install acme.sh
