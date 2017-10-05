@@ -358,6 +358,9 @@ _install_caddyfile $WEBMAIL_URL $ADMIN_URL $SMTP_URL $IMAP_URL
 # Start the caddy web server
 _start_caddy
 
+# Start cron daemon
+cron
+
 # Wait 20 seconds to be ready the webserver
 # and issue the certificates
 sleep 10
